@@ -14,16 +14,16 @@ pub fn gen_rsa(sec_param: u8) -> RSAKeyPair {
 
     let phi_n = (&p1 - BigUint::one()) * (&p2 - BigUint::one());
 
-    let e = p1; // p1 is moved here and can no longer be used as p1
+    let d = p1; // p1 is moved here and can no longer be used as p1
 
     assert_eq!(
-        gcd(&e, &phi_n),
+        gcd(&d, &phi_n),
         BigUint::one(),
-        "e and φ(n) are not coprime!"
+        "d and φ(n) are not coprime!"
     );
 
-    let egcd = extended_gcd(&e, &phi_n);
-    let d = if egcd.x < BigInt::zero() {
+    let egcd = extended_gcd(&d, &phi_n);
+    let e = if egcd.x < BigInt::zero() {
         (egcd.x + &phi_n.to_bigint().unwrap()).to_biguint().unwrap()
     } else {
         egcd.x.to_biguint().unwrap()

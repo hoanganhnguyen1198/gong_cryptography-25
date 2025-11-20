@@ -9,6 +9,7 @@ pub struct ExtendedGCD {
 }
 
 /// Euclidean Algorithm
+/// ### Description:
 /// Returns gcd(a, b)
 pub fn gcd(a: &BigUint, b: &BigUint) -> BigUint {
     let mut a = a.clone();
@@ -22,6 +23,7 @@ pub fn gcd(a: &BigUint, b: &BigUint) -> BigUint {
 }
 
 /// Extended Euclidean Algorithm
+/// ### Description:
 /// Given a and b, returns (gcd, x, y) such that: a * x + b * y = gcd(a, b)
 pub fn extended_gcd(a: &BigUint, b: &BigUint) -> ExtendedGCD {
     if *a == BigUint::ZERO {
