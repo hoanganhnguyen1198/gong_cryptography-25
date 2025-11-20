@@ -12,8 +12,10 @@ use gong_rsa_25::rsa::*;
 const EZ_SECURE_PARAM: u8 = 8;
 
 fn main() {
+    // Test Plain RSA
     test_plain_rsa();
 
+    // Test RSA-FDH
     test_fdh_rsa();
 }
 
