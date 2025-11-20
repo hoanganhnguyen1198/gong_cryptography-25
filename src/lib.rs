@@ -69,6 +69,8 @@ pub mod rsa {
     pub use num_primes::Generator;
     pub use num_traits::{One, Zero};
 
+    use crate::rsa;
+
     pub struct RSAKeyPair {
         pub n: BigUint,
         pub e: BigUint,
@@ -84,6 +86,8 @@ pub mod rsa {
         pub n: BigUint,
         pub d: BigUint,
     }
+
+    pub mod fdh_rsa;
 
     pub mod plain_rsa;
 }

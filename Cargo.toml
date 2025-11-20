@@ -9,3 +9,5 @@ modular = "1.0.0"
 num-primes = "0.2.0"
 num-traits = "0.2"
 num-bigint = "0.4"
+
+sha2 = "0.10.9"
