@@ -42,11 +42,10 @@ Description:
 The scheme is **non-degenerate**
 
 - There are many possible initial message $I$, and none has a high probability of being sent
-    
-    $$
-    \forall sk \, \land \, \forall I \quad|\quad \textnormal{Pr}[P_1(sk) = I] = \textnormal{negl}(n) 
-    $$
-    
+$$
+\forall sk \, \land \, \forall I \quad|\quad \textnormal{Pr}[P_1(sk) = I] = \textnormal{negl}(n) 
+$$
+
 
 Security requirement
 
