@@ -1,7 +1,6 @@
 use num_bigint::{BigInt, BigUint, ToBigInt};
 use num_traits::{Zero, One};
 
-
 pub struct ExtendedGCD {
     pub gcd: BigUint,
     pub x: BigInt,
@@ -91,3 +90,6 @@ pub mod rsa {
 
     pub mod plain_rsa;
 }
+
+pub mod schnorr;
+pub mod utils;
